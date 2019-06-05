@@ -243,6 +243,18 @@ header h4 {
   grid-gap: 1.5rem;
   margin-bottom: 6rem;
 }
+.centerPage h3 {
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.centerPage ul li {
+  font-style: italic;
+  text-align: center;
+  padding: 0.7rem 0rem;
+}
+.centerPage p {
+  text-align: justify;
+}
 .centerPage .pastGames {
   grid-row: 1;
   grid-column: 0.5;
