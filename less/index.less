@@ -102,12 +102,15 @@ nav {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	text-align: center;
+	justify-items: center;
 	font-size: 2.0rem;
 	.paddingStandard();
 	@media screen and (max-width: 800px) {
 		font-size: 1.6rem;
 	}
 	@media screen and (max-width: 500px) {
+		grid-template-columns: none;
+		grid-gap: 1rem;
 		font-size: 1.2rem;
 		.navHome {
 			grid-row: 1;
@@ -124,10 +127,12 @@ nav {
 	}
 }
 header {
+	display: grid;
+	justify-items: center;
+	text-align: center;
 	img {
-		display: flex;
-		justify-content: space-evenly;
 		max-width: 50%;
 		border-radius: 15% 35% 15%;
+		margin: 3rem 0 5rem 0;
 	}
 }
