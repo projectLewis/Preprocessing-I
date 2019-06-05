@@ -299,9 +299,7 @@ header h4 {
   }
 }
 .historySection {
-  display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: repeat(3, 1fr);
+  padding-bottom: 4rem;
 }
 @media screen and (max-width: 500px) {
   .historySection br {
@@ -319,6 +317,7 @@ header h4 {
 }
 .historySection h3 {
   text-align: center;
+  padding-bottom: 2rem;
 }
 .historySection .historyJobs {
   text-align: center;
