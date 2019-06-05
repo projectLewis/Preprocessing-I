@@ -211,7 +211,17 @@ header {
 header img {
   max-width: 50%;
   border-radius: 15% 35% 15%;
-  margin: 3rem 0 5rem 0;
+  margin: 3rem 0rem 5rem 0rem;
+}
+@media screen and (max-width: 800px) {
+  header img {
+    margin: 3rem 0rem 3rem 0rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  header img {
+    margin: 1.5rem 0rem 1.5rem 0rem;
+  }
 }
 .centerPage {
   display: grid;
@@ -239,6 +249,7 @@ header img {
   .centerPage {
     grid-template-columns: none;
     text-align: center;
+    margin-bottom: 3rem;
   }
   .centerPage p {
     font-size: 1.2rem;
@@ -266,6 +277,20 @@ header img {
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: repeat(3, 1fr);
+}
+@media screen and (max-width: 500px) {
+  .historySection br {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .historySection {
+    grid-template-columns: none;
+    grid-template-rows: none;
+  }
+  .historySection h3 {
+    padding: 2rem;
+  }
 }
 .historySection h3 {
   text-align: center;

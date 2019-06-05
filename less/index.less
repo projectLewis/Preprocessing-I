@@ -138,7 +138,14 @@ header {
 	img {
 		max-width: 50%;
 		border-radius: 15% 35% 15%;
-		margin: 3rem 0 5rem 0;
+		margin: 3rem 0rem 5rem 0rem;
+
+		@media screen and (max-width: 800px) {
+			margin: 3rem 0rem 3rem 0rem;
+		}
+		@media screen and (max-width: 500px) {
+			margin: 1.5rem 0rem 1.5rem 0rem;
+		}
 	}
 }
 .centerPage {
@@ -169,6 +176,7 @@ header {
 	@media screen and (max-width: 740px) {
 		grid-template-columns: none;
 		text-align: center;
+		margin-bottom: 3rem;
 		p { 
 			font-size: @baseFontTablet;
 		}
@@ -197,6 +205,18 @@ header {
 	display: grid;
 	grid-template-columns: 1;
 	grid-template-rows: repeat(3, 1fr);
+	@media screen and (max-width: 500px) {
+		br {
+			display: none;
+		}
+	}
+	@media screen  and (max-width: 400px) {
+		grid-template-columns: none;
+		grid-template-rows: none;
+		h3 {
+			.paddingStandard();
+		}
+	}
 		
 	h3 {
 		text-align: center;
