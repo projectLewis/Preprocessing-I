@@ -65,6 +65,10 @@ html {
 	padding: 2rem;
 }
 
+.listDecoration {
+	list-style: disc;
+}
+
 @navFontDesktop: 2rem;
 @navFontTablet: 1.6rem;
 @navFontMobile: 1.2rem;
@@ -99,6 +103,7 @@ a:hover {
 	}
 }
 nav {
+	background-color: aliceblue;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	text-align: center;
@@ -134,5 +139,79 @@ header {
 		max-width: 50%;
 		border-radius: 15% 35% 15%;
 		margin: 3rem 0 5rem 0;
+	}
+}
+.centerPage {
+	display: grid;
+	grid-template-columns: 15rem auto 15rem;
+	grid-template-rows: auto;
+	grid-gap: 1.5rem;
+	margin-bottom: 6rem;
+	// p { 
+	// 	font-size: @baseFontTablet;
+	// }
+
+	.pastGames {
+		grid-row: 1;
+		grid-column: 1/2;
+	}
+	.passion {
+		grid-row: 1;
+		grid-column: 2/3;
+		padding: 0 1.5rem;
+		border-left: .3rem solid aliceblue;
+		border-right: .3rem solid aliceblue;
+	}
+	.futureGames {
+		grid-row: 1;
+		grid-column: 3/4;
+	}
+	@media screen and (max-width: 740px) {
+		grid-template-columns: none;
+		text-align: center;
+		p { 
+			font-size: @baseFontTablet;
+		}
+		.pastGames {
+			grid-row: 1;
+			// grid-column: 1/2;
+		}
+		.passion {
+			grid-row: 2;
+			// grid-column: 2/3;
+		}
+		.futureGames {
+			grid-row: 3;
+			// grid-column: 3/4;
+		}
+	}
+	@media screen and (max-width: 500px) {
+		p {
+			font-size: @baseFontMobile;
+		}
+	}
+}
+.historySection {
+	// margin-bottom: 4rem;
+	display: grid;
+	grid-template-columns: 1;
+	grid-template-rows: repeat(3, 1fr);
+		
+	h3 {
+		text-align: center;
+	}
+
+	.historyJobs {
+		text-align: center;
+		}
+
+	li {
+		.listDecoration();
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.navBottom {
+		display: none;
 	}
 }

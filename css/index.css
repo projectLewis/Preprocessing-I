@@ -141,6 +141,9 @@ html {
 .paddingStandard {
   padding: 2rem;
 }
+.listDecoration {
+  list-style: disc;
+}
 /* Main Styles */
 a {
   text-decoration: none;
@@ -168,6 +171,7 @@ a:hover {
   }
 }
 nav {
+  background-color: aliceblue;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
@@ -208,4 +212,68 @@ header img {
   max-width: 50%;
   border-radius: 15% 35% 15%;
   margin: 3rem 0 5rem 0;
+}
+.centerPage {
+  display: grid;
+  grid-template-columns: 15rem auto 15rem;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  margin-bottom: 6rem;
+}
+.centerPage .pastGames {
+  grid-row: 1;
+  grid-column: 0.5;
+}
+.centerPage .passion {
+  grid-row: 1;
+  grid-column: 0.66666667;
+  padding: 0 1.5rem;
+  border-left: 0.3rem solid aliceblue;
+  border-right: 0.3rem solid aliceblue;
+}
+.centerPage .futureGames {
+  grid-row: 1;
+  grid-column: 0.75;
+}
+@media screen and (max-width: 740px) {
+  .centerPage {
+    grid-template-columns: none;
+    text-align: center;
+  }
+  .centerPage p {
+    font-size: 1.2rem;
+  }
+  .centerPage .pastGames {
+    grid-row: 1;
+  }
+  .centerPage .passion {
+    grid-row: 2;
+  }
+  .centerPage .futureGames {
+    grid-row: 3;
+  }
+}
+@media screen and (max-width: 500px) {
+  .centerPage p {
+    font-size: 1rem;
+  }
+}
+.historySection {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: repeat(3, 1fr);
+}
+.historySection h3 {
+  text-align: center;
+}
+.historySection .historyJobs {
+  text-align: center;
+}
+.historySection li {
+  list-style: disc;
+}
+@media screen and (max-width: 500px) {
+  .navBottom {
+    display: none;
+  }
 }
