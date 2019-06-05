@@ -86,8 +86,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
+  font-family: 'Overpass Mono', monospace;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -133,4 +132,73 @@ table {
 html,
 body {
   height: 100%;
+}
+/* converts REM to base 10 */
+html {
+  font-size: 62.5%;
+}
+/* variables & mixins */
+.paddingStandard {
+  padding: 2rem;
+}
+/* Main Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+#viewSettings {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 800px) {
+  #viewSettings {
+    max-width: 800px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #viewSettings {
+    max-width: 500px;
+    font-size: 1rem;
+  }
+}
+nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+}
+@media screen and (max-width: 800px) {
+  nav {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav {
+    font-size: 1.2rem;
+  }
+  nav .navHome {
+    grid-row: 1;
+  }
+  nav .navGames {
+    grid-row: 2;
+  }
+  nav .navHistory {
+    grid-row: 3;
+  }
+  nav .navContact {
+    grid-row: 4;
+  }
+}
+header img {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 50%;
+  border-radius: 15% 35% 15%;
 }
