@@ -248,6 +248,10 @@ header img {
   }
   .centerPage .passion {
     grid-row: 2;
+    padding: 2rem 0;
+    border: none;
+    border-top: 0.3rem solid aliceblue;
+    border-bottom: 0.3rem solid aliceblue;
   }
   .centerPage .futureGames {
     grid-row: 3;
@@ -271,6 +275,7 @@ header img {
 }
 .historySection li {
   list-style: disc;
+  padding-bottom: 0.5rem;
 }
 @media screen and (max-width: 500px) {
   .navBottom {
