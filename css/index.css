@@ -1,1 +1,333 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Overpass Mono', monospace;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* converts REM to base 10 */
+html {
+  font-size: 62.5%;
+}
+/* variables & mixins */
+.paddingStandard {
+  padding: 2rem;
+}
+.listDecoration {
+  list-style: disc;
+}
+/* Main Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+#viewSettings {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 800px) {
+  #viewSettings {
+    max-width: 800px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #viewSettings {
+    max-width: 500px;
+    font-size: 1rem;
+  }
+}
+nav {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  justify-items: center;
+  font-size: 2rem;
+  padding: 2rem;
+}
+@media screen and (max-width: 800px) {
+  nav {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav {
+    grid-template-columns: none;
+    grid-gap: 1rem;
+    font-size: 1.2rem;
+  }
+  nav .navHome {
+    grid-row: 1;
+  }
+  nav .navGames {
+    grid-row: 2;
+  }
+  nav .navHistory {
+    grid-row: 3;
+  }
+  nav .navContact {
+    grid-row: 4;
+  }
+}
+header {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+header img {
+  max-width: 50%;
+  border-radius: 15% 35% 15%;
+  margin: 3rem 0rem 5rem 0rem;
+}
+@media screen and (max-width: 800px) {
+  header img {
+    margin: 3rem 0rem 3rem 0rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  header img {
+    margin: 1.5rem 0rem 1.5rem 0rem;
+  }
+}
+header h4 {
+  padding-bottom: 3rem;
+}
+@media screen and (max-width: 800px) {
+  header h4 {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  header h4 {
+    padding-bottom: 1.2rem;
+  }
+}
+.centerPage {
+  display: grid;
+  grid-template-columns: 15rem auto 15rem;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  margin-bottom: 6rem;
+}
+.centerPage h3 {
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.centerPage ul li {
+  font-style: italic;
+  text-align: center;
+  padding: 0.7rem 0rem;
+}
+.centerPage p {
+  text-align: justify;
+}
+.centerPage .pastGames {
+  grid-row: 1;
+  grid-column: 0.5;
+}
+.centerPage .passion {
+  grid-row: 1;
+  grid-column: 0.66666667;
+  padding: 0 1.5rem;
+  border-left: 0.3rem solid aliceblue;
+  border-right: 0.3rem solid aliceblue;
+}
+.centerPage .futureGames {
+  grid-row: 1;
+  grid-column: 0.75;
+}
+@media screen and (max-width: 740px) {
+  .centerPage {
+    grid-template-columns: none;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .centerPage p {
+    font-size: 1.2rem;
+  }
+  .centerPage .pastGames {
+    grid-row: 1;
+  }
+  .centerPage .passion {
+    grid-row: 2;
+    padding: 2rem 0;
+    border: none;
+    border-top: 0.3rem solid aliceblue;
+    border-bottom: 0.3rem solid aliceblue;
+  }
+  .centerPage .futureGames {
+    grid-row: 3;
+  }
+}
+@media screen and (max-width: 500px) {
+  .centerPage p {
+    font-size: 1rem;
+  }
+}
+.historySection {
+  padding-bottom: 4rem;
+}
+@media screen and (max-width: 500px) {
+  .historySection br {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .historySection {
+    grid-template-columns: none;
+    grid-template-rows: none;
+  }
+  .historySection h3 {
+    padding: 0rem 0rem 2rem 0rem;
+  }
+}
+.historySection h3 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.historySection .historyJobs {
+  text-align: center;
+}
+.historySection li {
+  list-style: disc;
+  padding-bottom: 1.4rem;
+}
+@media screen and (max-width: 500px) {
+  .navBottom {
+    display: none;
+  }
+}
